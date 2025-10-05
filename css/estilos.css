@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+header {
+    background-color: #4a4d56;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.menu-toggle {
+    position: absolute;
+    left: -9999px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+header .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+header .menu a:hover,
+header .menu a.active {
+    color: #f8e9a1;
+}
+
+.hero {
+    background: url("/img/inicio.jpg") center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #f8e9a1;
+    color: #4a4d56;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #c49e70;
+    color: white;
+}
+
+.presentacion {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.presentacion h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 2rem;
+    color: #4a4d56;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #4a4d56;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #f8e9a1;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #c49e70;
+}
+
+.nosotros {
+    background-color: white;
+    padding: 60px 20px;
+}
+
+.nosotros .contenedor {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.nosotros h1 {
+    font-family: 'Baloo 2', cursive;
+    color: #4a4d56;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.nosotros p {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.img-nosotros {
+    margin-top: 40px;
+}
+
+.img-nosotros img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.productos {
+    background-color: white;
+    padding: 60px 20px;
+}
+
+.productos .contenedor {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.productos h1 {
+    font-family: 'Baloo 2', cursive;
+    color: #4a4d56;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.productos .intro {
+    color: #555;
+    margin-bottom: 40px;
+    font-size: 1.05rem;
+}
+
+.grid-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-family: 'Baloo 2', cursive;
+    color: #4a4d56;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.contacto {
+    background-color: white;
+    padding: 60px 20px;
+}
+
+.contacto .contenedor {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.contacto h1 {
+    font-family: 'Baloo 2', cursive;
+    color: #4a4d56;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.contacto .intro {
+    color: #555;
+    margin-bottom: 40px;
+    font-size: 1.05rem;
+}
+
+.grid-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.info {
+    flex: 1 1 40%;
+}
+
+.info h3 {
+    font-family: 'Baloo 2', cursive;
+    color: #4a4d56;
+    margin-bottom: 15px;
+}
+
+.info p {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.formulario {
+    flex: 1 1 50%;
+}
+
+.formulario h3 {
+    font-family: 'Baloo 2', cursive;
+    color: #4a4d56;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    resize: none;
+}
+
+button {
+    background-color: #f8e9a1;
+    color: #4a4d56;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #c49e70;
+    color: white;
+}
+
+.mapa iframe {
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .grid-productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .grid-contacto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info, .formulario {
+        flex: 1 1 100%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    header .menu {
+        display: none;
+        width: 100%;
+        background: #4a4d56;
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .menu-toggle:checked + .menu-icon + .menu {
+        display: block;
+    }
+
+    header .menu ul {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    header .menu a {
+        display: block;
+        padding: 10px 12px;
+        color: #fff;
+    }
+}
